@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+  
+  <!-- External Bootstrap Libraries -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script> 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- Stratus Forms Libraries -->
+	<script type="text/javascript" src="../SiteAssets/libs/jquery.SPServices.min.js"></script>
+	<script type="text/javascript" src="..SiteAssets/libs/stratus-forms-1.55.js"></script>
+	<script type="text/javascript" src="../SiteAssets/libs/stratus-forms-data-SPServices-1.55.js"></script>
+
+
+	<!-- Bootstrap Validation Plugin v2.2 -->
+	<script type="text/javascript"  src="../SiteAssets/libs/bootstrap-validate.js"></script>
+	
+	<!-- TinyMCE Rich text editor v5 -->
+	<script type="text/javascript" src="https://cdn.tiny.cloud/1/your-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  	
+  
+  <!--SharePoint Libs -->
+	<script type="text/javascript" src="/_layouts/15/clientforms.js" ></script> 
+	<script type="text/javascript" src="/_layouts/15/clientpeoplepicker.js" ></script> 
+	<script type="text/javascript" src="/_layouts/15/autofill.js" ></script> 
+	<script type="text/javascript" src="/_layouts/15/clienttemplates.js" ></script>
+	<script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
+	<script type="text/javascript" src="/_layouts/sp.js"></script>   
+  
+  <!--Custom Styles-->
+ <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="../SiteAssets/styles/tlcpmo.css" >
+    
+  <title>New User Story Form</title>
+  
+</head>
+
+<body>
+	
+	<!-- Navigation Bar -->
+  <nav class="navbar navbar-dark " style="background-color:#153e67;" >
+	<button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#menuList" aria-controls="menuList" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+  
+    <!-- Navigation Menu Content -->
+  <div class="collapse navbar-collapse" id="menuList">
+  	
+  	<!-- Links -->
+    <ul class="navbar-nav mr-auto">
+   		<li class="nav-item active" >
+   			<a class="nav-link" style="color:#f8d100" href="../Lists/TestStory">My User Stories<span class="sr-only">(current)</span></a>
+    	</li>
+
+    	
+    </ul>
+  </div>
+</nav>
+
+<!-- Form Controls -->
+<div class="container">
+<div class="card-group align-middle">
+<div class="card">
+<form method="post" id="storyForm" class="text-left border border-light p-5">
+	<div class="md-form">
+		<div class="form-group required ">
+			<label class="control-label font-weight-bold" for="StoryTitle">My Story Name</label>
+			<input class="form-control " id="StoryTitle" name="StoryTitle" listFieldName="Title"  type="text" placeholder="Give the story a title..."  >
+			<span></span>
+		</div>
+	</div>
+  <div class="form-group required">
+    <label class="control-label font-weight-bold" for="Story">My User Story</label>
+    <input type="text" class="form-control rounded-1" id="Story" listFieldName="Body" placeholder="As a &lt;role&gt;, I want to &lt;describe an action or behavior&gt;, so that I can &lt;describe your goal&gt;." >
+  </div>
+	<div class="form-group required">
+		<label class="control-label font-weight-bold" for="Acceptance">My Acceptance Criteria</label>
+	<textarea class="form-control rounded-1 " id="Acceptance" listFieldName="Acceptance" placeholder="Specify your quality requirements to confirm that the story is working as intended." rows="10"></textarea>
+ </div>
+  <div class="btn-group btn-group-lg" >
+  	<button id="submitButton" type="button" class="btn btn-primary btn-lg" style="color:#f8d100;background-color:#153e67">Submit</button> 
+  </div>
+	<div id="alertMessage" class="alert"></div>  
+</form>
+</div>
+</div>
+</div>
+
+<!-- Form Script   -->
+<script type="text/javascript" src="../SiteAssets/scripts/NewStoryForm.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
